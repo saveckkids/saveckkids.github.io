@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Save Christ the King Daycare</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font: 17px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #1f4e8c; color: #fff; text-align: center; padding: 24px; box-sizing: border-box; }
+    main { max-width: 28rem; }
+    h1 { font-size: 1.5rem; margin: 0 0 8px; }
+    p { margin: 0 0 18px; opacity: .92; }
+    a.btn { display: inline-block; background: #fff; color: #1f4e8c; font-weight: 700; text-decoration: none; padding: 12px 22px; border-radius: 10px; }
+  </style>
+  <script>
+    // ============================================================
+    // THE ONLY LINE YOU EVER EDIT: paste the Apps Script web app URL
+    // (ends in /exec) between the quotes. Leave it empty ('') to show
+    // the "coming soon" message instead.
+    // ============================================================
+    var TARGET = '';
+
+    if (TARGET) {
+      // Pass along anything after "?" (e.g. ?src=flyer) to the app.
+      var dest = TARGET + (location.search ? (TARGET.indexOf('?') === -1 ? '?' : '&') + location.search.slice(1) : '');
+      location.replace(dest);
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Save Christ the King Daycare</h1>
+    <div id="go" hidden>
+      <p>Taking you to the letter signing page…</p>
+      <a class="btn" id="link" href="#">Tap here if nothing happens</a>
+    </div>
+    <div id="soon" hidden>
+      <p>The letter signing page opens soon. Please check back shortly!</p>
+    </div>
+    <noscript><p>Please turn on JavaScript to open the letter signing page.</p></noscript>
+  </main>
+  <script>
+    if (TARGET) {
+      document.getElementById('link').href = TARGET;
+      document.getElementById('go').hidden = false;
+    } else {
+      document.getElementById('soon').hidden = false;
+    }
+  </script>
+</body>
+</html>
